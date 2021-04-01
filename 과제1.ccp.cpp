@@ -1,11 +1,11 @@
 #include <iostream>
 
-int main_first(void)
+int main(void)
 {
-	std::cout << "´ç½ÅÀÇ ÀÌ¸§Àº ¹«¾ùÀÔ´Ï±î?\n";
-	char name_5[7];
-	std::cin.getline(name_5, 11, '\n');  // "ÀÌÀº°æ"ÀÌ ¾Æ´Ñ "ÀÌ Àº°æ"À» ÀÔ·Â¹ÞÀ»°ÍÀÌ±â ¶§¹®¿¡ °ø°´ Æ÷ÇÔÇÑ ¹®ÀÚ¿­À» ¹ÞÀ»¼öÀÖ´Â cin.getline()À»»ç¿ëÇÔ
-	std::cout << "¹Ý°©½À´Ï´Ù." << name_5 << "´Ô" << std::endl;
+	std::cout << "ë‹¹ì‹ ì˜ ì´ë¦„ì€ ë¬´ì—‡ìž…ë‹ˆê¹Œ?\n";
+	char name_5[8];
+	std::cin.getline(name_5, 11, '\n');  // "ì´ì€ê²½"ì´ ì•„ë‹Œ "ì´ ì€ê²½"ì„ ìž…ë ¥ë°›ì„ê²ƒì´ê¸° ë•Œë¬¸ì— ê³µê° í¬í•¨í•œ ë¬¸ìžì—´ì„ ë°›ì„ìˆ˜ìžˆëŠ” cin.getline()ì„ì‚¬ìš©í•¨
+	std::cout << "ë°˜ê°‘ìŠµë‹ˆë‹¤." << name_5 << "ë‹˜" << std::endl;
 
 	int apple;
 	int banana;
@@ -15,22 +15,22 @@ int main_first(void)
 	int orange_price;
 	int total;
 
-	std::cout << "appleÀÇ °¡°ÝÀº ¾ó¸¶ÀÔ´Ï´Ù?";
+	std::cout << "appleì˜ ê°€ê²©ì€ ì–¼ë§ˆìž…ë‹ˆë‹¤?";
 	std::cin >> apple;
-	std::cout << "bananaÀÇ °¡°ÝÀº ¾ó¸¶ÀÔ´Ï´Ù?";
+	std::cout << "bananaì˜ ê°€ê²©ì€ ì–¼ë§ˆìž…ë‹ˆë‹¤?";
 	std::cin >> banana;
-	std::cout << "orangeÀÇ °¡°ÝÀº ¾ó¸¶ÀÔ´Ï´Ù?";
+	std::cout << "orangeì˜ ê°€ê²©ì€ ì–¼ë§ˆìž…ë‹ˆë‹¤?";
 	std::cin >> orange;
 
-	std::cout << "appleÀº ¸î°³ ÀÖ½À´Ï±î?";
+	std::cout << "appleì€ ëª‡ê°œ ìžˆìŠµë‹ˆê¹Œ?";
 	std::cin >> apple_price;
-	std::cout << "bananaÀº ¸î°³ ÀÖ½À´Ï±î?";
+	std::cout << "bananaì€ ëª‡ê°œ ìžˆìŠµë‹ˆê¹Œ?";
 	std::cin >> banana_price;
-	std::cout << "orangeÀº ¸î°³ ÀÖ½À´Ï±î?";
+	std::cout << "orangeì€ ëª‡ê°œ ìžˆìŠµë‹ˆê¹Œ?";
 	std::cin >> orange_price;
 
 	total = apple * apple_price + banana * banana_price + orange * orange_price - 500;
-	std::cout << "ÃÑ" << total << "¿ø ÀÔ´Ï´Ù.\n";
+	std::cout << "ì´" << total << "ì› ìž…ë‹ˆë‹¤.\n";
 	
 
 }
