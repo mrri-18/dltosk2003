@@ -6,7 +6,7 @@ int main(void)
 	cin >> a;
 	for (int i = 1; i <= a; i++)
 	{
-		if (a % 2 == 0)
+		if (a % 2 == 0) // 짝수일때의 경우
 		{
 			for (int k = 1; k <= a / 2; k++)
 			{
@@ -20,14 +20,14 @@ int main(void)
 			}
 			cout << endl;
 		}
-		else
+		else // 홀수 일때의 경우
 		{
-			for (int k = 1; k <= a / 2+1; k++)
+			for (int k = 1; k <= a / 2+1; k++) // 홀수일때 +1해야함
 			{
-				cout << "* ";
+				cout << "* "; //띄어씌기는 무조건!
 			}
 			cout << endl;
-			cout << " ";
+			cout << " "; // 여기서 띄어줘야지 한칸 띄고 *
 			for (int k = 1; k <= a / 2; k++)
 			{
 				cout << "* ";
