@@ -1,32 +1,35 @@
 #include <iostream>
 using namespace std;
 
-int accounts[4] = { 5000, 4000, 0, 10 };
-int total(int *total)
+void total(int *p_total, int *p_bank)
 {
-	int *total1 = 0;
-	for (int i = 0; i < 4; i++)
-	{
-		total1 = total1 + accounts[i]; //왜 실행이 안되는지 모르겠어요 ㅠㅠ
+	int Total_money = *p_total;
+	int Bank = *p_bank;
+	for (int i = 0; i < 4; i++) {
+		*p_total = *p_total + *(p_bank + i); //왜 실행이 안되는지 모르겠어요 ㅠㅠ
 	}
-	return *total1;
 }
 
 void myaccounts()
 {
+	int bank[4] = { 5000, 4000, 0, 10 };
 	int i = 0;
 	cout << "|" << "하나" << "|" << "우리" << "|" << "신한" << "|" << "국민" << "|" << endl;
 	for (i = 0; i < 4; i++)
 	{
-		cout << "|" << accounts[i] << "|";
+		cout << "|" << bank[i] << "|";
 	}
 	cout << endl;
 }
 
 int main()
 {
-	int total_money;
+	int bank[4] = { 5000, 4000, 0, 10 };
+	string bank_name[4] = { "하나", "우리", "신한","국민" };
+	int total_money=0;
+
+	cout << "*********************자산관리 서비스 ******************************" << endl;
 	myaccounts();
-	total(&total_money);
+	total(&total_money, bank);
 	cout << "등록된 회원님의 총 자산은" << total_money << "원 입니다." << endl;
 }
