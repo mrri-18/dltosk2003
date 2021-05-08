@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+class ovalArea {
+public:
+	int a;
+	int b;
+	int width;
+	int height;
+	ovalArea();
+	ovalArea(int x, int y);
+	int getA();
+	int getB();
+	double Area();
+	int set();
+};
+
+ovalArea::ovalArea() {
+	set();
+	cout << "Oval 소멸 : width =" << width << ", height =" << height;
+}
+
+ovalArea::ovalArea(int x, int y) {
+	cout << "Oval 소멸 : width =" << x << ", height =" << y;
+}
+
+int ovalArea::getA() {
+	return rand()%5;
+}
+
+int ovalArea::getB() {
+	return rand() % 5;
+}
+
+double ovalArea::Area() {
+	return a*b*3.14;
+}
+
+int ovalArea::set() {
+	width = 10;
+	height = 20;
+	return width, height;
+}
+
+int main()
+{
+	ovalArea q;
+	int a = q.getA();
+	int b = q.getB();
+	double area = q.Area();
+	cout << "타원의 넓이는" << area << "이다." << endl;
+
+	ovalArea p(3, 4);
+	a = p.getA();
+	b = p.getB();
+	area = p.Area();
+	cout << "타원의 넓이는" << area << "이다." << endl;
+}
