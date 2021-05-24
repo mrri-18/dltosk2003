@@ -1,0 +1,47 @@
+#define _CRT_SECURE_NO_WARINGS
+#include <iostream>
+#include <string>
+using namespace std;
+
+class SWINGmember{
+	public:
+		int kisu;
+		char *name;
+		SWINGmember();
+		SWINGmember(int n, const char *name);
+		~SWINGmember();
+		void info();
+		void changeName(const char* name);
+};
+
+SWINGmember::~SWINGmember() {
+	cout << "소멸자실행" << name << endl;
+	delete[]name;
+}
+
+SWINGmember::SWINGmember() {
+	kisu = 00;
+}
+
+SWINGmember::SWINGmember(int n, const char *name) {
+	kisu = n;
+	this->name = new char[7];
+	strcpy_s(this->name,7, name);
+}
+
+void SWINGmember::info() {
+	cout << "SWING" << kisu << "기" << name << endl;
+}
+
+void SWINGmember::changeName(const char* name) {
+	strcpy_s(this->name,7, name);
+}
+
+int main() {
+	SWINGmember a(29, "피카츄");
+	SWINGmember b(a);
+	a.info();
+	b.info();
+	b.changeName("라이츄");
+	return 0;
+}
